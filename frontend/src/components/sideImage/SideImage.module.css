@@ -1,0 +1,26 @@
+.SideImg {
+  width: calc(100vw - 400px);
+  background: linear-gradient(rgba(31, 40, 51, 0.9), rgba(31, 40, 51, 0.7)),
+    url("../../img/loginSideImage.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  color: #c5c6c7;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-blend-mode: darken;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  text-align: right;
+  color: #66fcf1;
+  font-weight: 600;
+  font-size: 50px;
+}
+
+@media screen and (max-width: 599px) {
+  .SideImg {
+    display: none;
+  }
+}

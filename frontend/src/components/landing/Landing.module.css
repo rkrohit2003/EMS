@@ -1,0 +1,65 @@
+.backgroundImage {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7)),
+    url("../../img/landing-background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  color: #c5c6c7;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-blend-mode: darken;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.p1 {
+  color: #66FCF1;
+  font-size: 1.6rem;
+  letter-spacing: 0.5rem;
+}
+
+.p2 {
+  color: #66FCF1;
+  font-size: 3.8rem;
+  font-family: BlackChancery;
+  letter-spacing: 0.3rem;
+}
+
+#p3 {
+  font-size: 1.3rem;
+}
+
+.Button {
+  margin-top: 50px;
+  border: 1px solid #66fcf1;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #1f2833;
+  color: #66fcf1;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: large;
+  letter-spacing: 0.3em;
+  padding-left: 00.3em;
+}
+
+.Button:hover {
+  background-color: #66fcf1;
+  color: #1f2833;
+  font-weight: 600;
+}

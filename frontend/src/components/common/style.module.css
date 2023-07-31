@@ -1,0 +1,130 @@
+.dis {
+  margin-top: 100px;
+  margin-left: 300px;
+}
+
+.home {
+  font-size: xx-large;
+  font-weight: 600;
+}
+
+.minH {
+  min-height: 70vh;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.textCenter {
+  margin-top: -30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.Button {
+  margin: 2px;
+}
+
+.over {
+  overflow: auto;
+}
+
+/* Add Employee css */
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.inputGap {
+  margin-bottom: 20px;
+}
+
+.bottom {
+  margin-top: 10px;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cancelIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.container {
+  position: relative;
+}
+
+/* Sidebar.module.css */
+
+.drawerPaper {
+  width: 250px;
+  margin-top: 65px;
+  background-color: #f5f5f5;
+}
+
+.container {
+  display: flex;
+}
+
+/* NavBar.module.css */
+
+
+.title {
+  flex-grow: 1;
+}
+
+.title span {
+  display: block;
+}
+
+.notificationIcon {
+  margin-right: 15px;
+}
+
+.profileIcon {
+  margin-left: auto;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+/* styles for small and medium devices */
+@media only screen and (max-width: 900px) {
+  .dis {
+    margin-left: auto;
+    justify-content: center;
+  }
+}
+
+.mobileSidebar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  /* padding: auto; */
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.listHorizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+.listItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

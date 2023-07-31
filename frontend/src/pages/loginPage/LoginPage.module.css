@@ -1,0 +1,8 @@
+.Combine {
+    /* min-height: 100vh; */
+    box-sizing: border-box;
+    width: 100vw;
+    background-color: azure;
+    display: flex;
+    justify-content: space-between;
+  }
