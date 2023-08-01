@@ -13,7 +13,7 @@ export const LeaveRequest = () => {
   useEffect(() => {
     const fetchLeaves = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/leaves');
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND}/api/leaves`);
         setLeaves(response.data);
         setFetchd(1);
       } catch (error) {
@@ -26,7 +26,7 @@ export const LeaveRequest = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/api/leave/${id}`);
+      await axios.delete(`${process.env.REACT_APP_BACKEND}/api/leave/${id}`);
       setLeaves(leaves.filter((leave) => leave._id !== id));
     } catch (error) {
       console.error('Error deleting leave request:', error);
@@ -35,7 +35,7 @@ export const LeaveRequest = () => {
 
   const handleAction = async (id, status) => {
     try {
-      await axios.put(`http://localhost:8000/api/leave/${id}`, { status });
+      await axios.put(`${process.env.REACT_APP_BACKEND}/api/leave/${id}`, { status });
       setLeaves((prevLeaves) =>
         prevLeaves.map((leave) => {
           if (leave._id === id) {

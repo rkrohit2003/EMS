@@ -14,7 +14,7 @@ export const ManagerNotification = () => {
   useEffect(() => {
     const fetchNotifications = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/notifications');
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND}/api/notifications`);
         setNotifications(response.data);
         setFetchd(1);
       } catch (error) {
@@ -26,7 +26,7 @@ export const ManagerNotification = () => {
   }, []);
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/api/notification/${id}`);
+      await axios.delete(`https://ems-backend-l1l2.onrender.com/api/notification/${id}`);
       setNotifications(notifications.filter((notification) => notification._id !== id));
     } catch (error) {
       console.error('Error deleting notification:', error);

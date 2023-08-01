@@ -25,7 +25,7 @@ export default function Login({ setIsLoggedIn, setIsManager }) {
     const password = data.get('password');
 
     try {
-      const response = await axios.post('http://localhost:8000/api/login', {
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND}/api/login`, {
         email,
         password
       });
@@ -33,7 +33,7 @@ export default function Login({ setIsLoggedIn, setIsManager }) {
       const isLoggedIn = response.data !== 0;
 
       if (isLoggedIn) {
-        const curUser = await axios.get(`http://localhost:8000/api/user/${email}`);
+        const curUser = await axios.get(`${process.env.REACT_APP_BACKEND}/api/user/${email}`);
         setIsLoggedIn(isLoggedIn);
         setIsManager(curUser.data[0].isManager);
         localStorage.setItem('name', curUser.data[0].name);
@@ -121,7 +121,6 @@ export default function Login({ setIsLoggedIn, setIsManager }) {
                 label="Email Address"
                 name="email"
                 autoFocus
-              // error={error !== null} // Highlight the email field when there's an error
               />
               <TextField
                 margin="normal"

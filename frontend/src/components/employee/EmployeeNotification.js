@@ -14,7 +14,7 @@ export const EmployeeNotification = () => {
   useEffect(() => {
     const fetchNotifications = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/notifications');
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND}/api/notifications`);
         setNotifications(response.data);
         setFetchd(1);
       } catch (error) {

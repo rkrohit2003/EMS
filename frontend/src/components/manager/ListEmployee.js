@@ -10,7 +10,7 @@ export const ListEmployee = () => {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/users');
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND}/api/users`);
         setEmployees(response.data);
         setFetchd(1);
       } catch (error) {
@@ -20,13 +20,12 @@ export const ListEmployee = () => {
 
     fetchEmployees();
   }, []);
-
-  // Filter out the non-manager users
+  
   const nonManagerEmployees = employees.filter((employee) => employee.isManager === false);
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/api/user/${id}`);
+      await axios.delete(`${process.env.REACT_APP_BACKEND}/api/user/${id}`);
       setEmployees(employees.filter((employee) => employee._id !== id));
     } catch (error) {
       console.error('Error deleting employee:', error);
@@ -52,7 +51,6 @@ export const ListEmployee = () => {
   };
 
   const handleEmployeeUpdate = (updatedEmployee) => {
-    // Update the list of employees with the updated data
     setEmployees((prevEmployees) =>
       prevEmployees.map((emp) => (emp._id === updatedEmployee._id ? updatedEmployee : emp))
     );

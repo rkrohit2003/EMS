@@ -33,7 +33,7 @@ const AssignTask = () => {
         setDescError("Task description can not be empty");
         return;
       }
-      const response = await axios.get(`http://localhost:8000/api/user/${email}`);
+      const response = await axios.get(`${process.env.REACT_APP_BACKEND}/api/user/${email}`);
 
       if (response.data.length === 0) {
         setEmailError('Invalid email. Please enter a valid email.');
@@ -53,7 +53,7 @@ const AssignTask = () => {
       };
 
       const employeeName = response.data[0].name;
-      await axios.post('http://localhost:8000/api/task', {
+      await axios.post(`${process.env.REACT_APP_BACKEND}/api/task`, {
         ...taskData,
         managerName,
         employeeName

@@ -15,7 +15,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/user/${localStorage.getItem('isLoggedIn')}`);
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND}/api/user/${localStorage.getItem('isLoggedIn')}`);
         setUser(response.data[0]);
       } catch (error) {
         console.error('Error fetching user:', error);

@@ -28,7 +28,7 @@ const AddEmployeeForm = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:8000/api/user', formData);
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND}/api/user`, formData);
       console.log('Added employee:', response.data);
       navigate("/listEmployee");
     } catch (error) {

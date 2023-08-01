@@ -13,7 +13,7 @@ export const ListTask = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/tasks');
+        const response = await axios.get('https://ems-backend-l1l2.onrender.com/api/tasks');
         setTasks(response.data);
         setFetchd(1);
       } catch (error) {
@@ -25,7 +25,7 @@ export const ListTask = () => {
   }, []);
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/api/task/${id}`);
+      await axios.delete(`${process.env.REACT_APP_BACKEND}/api/task/${id}`);
       setTasks(tasks.filter((task) => task._id !== id));
     } catch (error) {
       console.error('Error deleting task:', error);

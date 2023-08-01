@@ -13,7 +13,7 @@ export const RequestedLeave = () => {
   useEffect(() => {
     const fetchLeaves = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/leaves/${curEmail}`);
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND}/api/leaves/${curEmail}`);
         setLeaves(response.data);
         setFetchd(1);
       } catch (error) {

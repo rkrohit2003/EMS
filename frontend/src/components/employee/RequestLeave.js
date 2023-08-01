@@ -21,7 +21,7 @@ const RequestLeave = () => {
         reason, startDate, endDate
       };
 
-      await axios.post('http://localhost:8000/api/leave', leaveData);
+      await axios.post(`${process.env.REACT_APP_BACKEND}/api/leave`, leaveData);
       navigate("/requestedLeave");
 
     } catch (error) {

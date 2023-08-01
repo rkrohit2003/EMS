@@ -19,20 +19,18 @@ const AssignTask = () => {
         setError('Notification message can not be empty.');
         return;
       }
-
-      // Fetch the list of registered users
-      const response = await axios.get('http://localhost:8000/api/users');
+      
+      const response = await axios.get(`${process.env.REACT_APP_BACKEND}/api/users`);
       const users = response.data;
-
-      // Create an array of user objects with email and name
+      
       const usersData = users
-        .filter((user) => user.isManager === false) // Filter out users where isManager is false
+        .filter((user) => user.isManager === false)
         .map((user) => ({
           email: user.email,
           name: user.name,
         }));
         
-      await axios.post('http://localhost:8000/api/notification', {
+      await axios.post(`${process.env.REACT_APP_BACKEND}/api/notification`, {
         message,
         users: usersData,
         managerName

@@ -31,7 +31,7 @@ const UpdateEmployeeForm = ({ employee, onUpdate, onCancel }) => {
     };
 
     try {
-      const response = await axios.put(`http://localhost:8000/api/user/${employee._id}`, updatedEmployee);
+      const response = await axios.put(`${process.env.REACT_APP_BACKEND}/api/user/${employee._id}`, updatedEmployee);
       console.log('Updated Employee:', response.data);
       onUpdate(response.data); // Pass the updated employee data back to the parent component
     } catch (error) {
