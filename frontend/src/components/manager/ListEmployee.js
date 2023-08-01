@@ -6,15 +6,16 @@ import ViewEmployee from './ViewEmployee';
 
 export const ListEmployee = () => {
   const [employees, setEmployees] = useState([]);
-  const [fetchd, setFetchd] = useState(0);
+  const [fetchd, setFetchd] = useState(false);
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
         const response = await axios.get(`${process.env.REACT_APP_BACKEND}/api/users`);
         setEmployees(response.data);
-        setFetchd(1);
+        setFetchd(true);
       } catch (error) {
         console.error('Error fetching employees:', error);
+        setFetchd(true);
       }
     };
 
@@ -71,7 +72,8 @@ export const ListEmployee = () => {
             employee={selectedEmployee2}
             onCancel={handleCancel}
           />
-        ) : nonManagerEmployees.length > 0 ? (
+        ) : fetchd ? (
+          nonManagerEmployees.length > 0 ? (
           <div>
             <h2 className={`${styles.textCenter}`}>Employee Details</h2>
             <div className={`${styles.over}`}>
@@ -123,8 +125,9 @@ export const ListEmployee = () => {
               </table>
             </div>
           </div>
-        ) : fetchd === 1 ? (
+        ) : (
           <h2>Currently, there is no employee listed.</h2>
+        )
         ) : (
           <h2>Loading...</h2>
         )}

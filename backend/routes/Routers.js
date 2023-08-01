@@ -53,22 +53,6 @@ router.post('/api/user', async (req, res) => {
   }
 })
 
-// router.put('/api/user/:id', async (req, res) => {
-//   const { id } = req.params;
-//   const updateData = req.body;
-
-//   try {
-//     const updatedEmployee = await User.findByIdAndUpdate(id, updateData, { new: true });
-//     if (!updatedEmployee) {
-//       return res.status(404).json({ message: 'Employee not found' });
-//     }
-//     res.json(updatedEmployee);
-//   } catch (error) {
-//     console.error('Error updating employee:', error);
-//     res.status(500).json({ message: 'Internal server error' });
-//   }
-// });
-
 router.put('/api/user/:id', async (req, res) => {
   const { id } = req.params;
   const updateData = req.body;
@@ -88,19 +72,6 @@ router.put('/api/user/:id', async (req, res) => {
     res.status(500).json({ message: 'Internal server error' });
   }
 });
-
-// router.delete('/api/user/:id', async (req, res) => {
-//   try {
-//     const employee = await User.findByIdAndDelete(req.params.id);
-//     if (!employee) {
-//       return res.status(404).json({ error: 'Employee not found' });
-//     }
-//     res.json({ message: 'Employee deleted successfully' });
-//   } catch (error) {
-//     console.error('Error deleting employee:', error);
-//     res.status(500).json({ error: 'Internal server error' });
-//   }
-// });
 
 router.delete('/api/user/:id', async (req, res) => {
   try {
