@@ -38,73 +38,76 @@ const AddEmployeeForm = () => {
 
   return (
     <div className={styles.dis}>
-      <form className={`${styles.form} ${styles.container} ${styles.minHAddEmp}`} onSubmit={handleSubmit}>
-        <div className={styles.cancelIcon} onClick={() => navigate('/')}>
-          <CancelIcon />
-        </div>
-        <h2 className={styles.heading}>Add Employee</h2>
-        <TextField
-          label="Name"
-          style={{ marginBottom: '20px' }}
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-        <TextField
-          label="Email"
-          style={{ marginBottom: '20px' }}
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          type="email"
-        />
-        <TextField
-          label="Password"
-          style={{ marginBottom: '20px' }}
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-          type="password"
-        />
-        <TextField
-          label="Phone"
-          style={{ marginBottom: '20px' }}
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          required
-          type="tel"
-        />
-        <TextField
-          label="Address"
-          style={{ marginBottom: '20px' }}
-          value={address}
-          onChange={(e) => setAddress(e.target.value)}
-          required
-        />
-        <TextField
-          label="Department"
-          style={{ marginBottom: '20px' }}
-          value={department}
-          onChange={(e) => setDepartment(e.target.value)}
-          required
-        />
-        <TextField
-          label="Salary"
-          style={{ marginBottom: '20px' }}
-          value={salary}
-          onChange={(e) => setSalary(e.target.value)}
-          required
-          type="number"
-        />
-        <Button
-          type="submit"
-          variant="contained"
-          color="primary"
-          className={styles.button}
-        >
-          Add Employee
-        </Button>
-      </form></div>
+      <div className={styles.mb}>
+        <form className={`${styles.form} ${styles.container} ${styles.minHAddEmp}`} onSubmit={handleSubmit}>
+          <div className={styles.cancelIcon} onClick={() => navigate('/')}>
+            <CancelIcon />
+          </div>
+          <h2 className={styles.heading}>Add Employee</h2>
+          <TextField
+            label="Name"
+            style={{ marginBottom: '20px' }}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+          <TextField
+            label="Email"
+            style={{ marginBottom: '20px' }}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            type="email"
+          />
+          <TextField
+            label="Password"
+            style={{ marginBottom: '20px' }}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            type="password"
+          />
+          <TextField
+            label="Phone"
+            style={{ marginBottom: '20px' }}
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            required
+            type="tel"
+          />
+          <TextField
+            label="Address"
+            style={{ marginBottom: '20px' }}
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+            required
+          />
+          <TextField
+            label="Department"
+            style={{ marginBottom: '20px' }}
+            value={department}
+            onChange={(e) => setDepartment(e.target.value)}
+            required
+          />
+          <TextField
+            label="Salary"
+            style={{ marginBottom: '20px' }}
+            value={salary}
+            onChange={(e) => setSalary(e.target.value)}
+            required
+            type="number"
+          />
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            className={styles.button}
+          >
+            Add Employee
+          </Button>
+        </form>
+      </div>
+    </div>
   );
 };
 

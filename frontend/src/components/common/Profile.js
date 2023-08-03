@@ -27,34 +27,36 @@ const Profile = () => {
 
   return (
     <div className={styles.dis}>
-      {user === null ? (
-        <h2>Loading...</h2>
-      ) : (
-        <form className={`${styles.form} ${styles.container}`}>
-          <div className={styles.cancelIcon} onClick={() => navigate('/')}>
-            <CancelIcon />
-          </div>
-          <h2 className={styles.heading}>Your Profile</h2>
-          <TextField label="Name" style={{ marginBottom: '20px' }} value={user.name} />
-          <TextField label="Email" style={{ marginBottom: '20px' }} value={user.email} type="email" />
-          <TextField label="Password" style={{ marginBottom: '20px' }} value={user.password} type={showPassword ? 'text' : 'password'}
-            InputProps={{
-              endAdornment: (
-                <IconButton onClick={() => setShowPassword(!showPassword)} edge="end">
-                  {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
-                </IconButton>
-              )
-            }}
-          />
-          <TextField label="Phone" style={{ marginBottom: '20px' }} value={user.phone} type="tel" />
-          <TextField label="Address" style={{ marginBottom: '20px' }} value={user.address} />
-          <TextField label="Department" style={{ marginBottom: '20px' }} value={user.department} />
-          <TextField label="Salary" style={{ marginBottom: '20px' }} value={user.salary} type="number" />
-          <Button variant="contained" color="primary" onClick={() => navigate('/')}>
-            Back
-          </Button>
-        </form>
-      )}
+      <div className={styles.mb}>
+        {user === null ? (
+          <h2>Loading...</h2>
+        ) : (
+          <form className={`${styles.form} ${styles.container}`}>
+            <div className={styles.cancelIcon} onClick={() => navigate('/')}>
+              <CancelIcon />
+            </div>
+            <h2 className={styles.heading}>Your Profile</h2>
+            <TextField label="Name" style={{ marginBottom: '20px' }} value={user.name} />
+            <TextField label="Email" style={{ marginBottom: '20px' }} value={user.email} type="email" />
+            <TextField label="Password" style={{ marginBottom: '20px' }} value={user.password} type={showPassword ? 'text' : 'password'}
+              InputProps={{
+                endAdornment: (
+                  <IconButton onClick={() => setShowPassword(!showPassword)} edge="end">
+                    {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
+                  </IconButton>
+                )
+              }}
+            />
+            <TextField label="Phone" style={{ marginBottom: '20px' }} value={user.phone} type="tel" />
+            <TextField label="Address" style={{ marginBottom: '20px' }} value={user.address} />
+            <TextField label="Department" style={{ marginBottom: '20px' }} value={user.department} />
+            <TextField label="Salary" style={{ marginBottom: '20px' }} value={user.salary} type="number" />
+            <Button variant="contained" color="primary" onClick={() => navigate('/')}>
+              Back
+            </Button>
+          </form>
+        )}
+      </div>
     </div>
   );
 };

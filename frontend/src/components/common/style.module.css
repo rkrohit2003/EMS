@@ -105,6 +105,9 @@
     margin-left: auto;
     justify-content: center;
   }
+  .mb{
+    margin-bottom: 50px;
+  }
 }
 
 .mobileSidebar {

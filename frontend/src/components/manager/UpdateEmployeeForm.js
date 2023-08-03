@@ -40,7 +40,7 @@ const UpdateEmployeeForm = ({ employee, onUpdate, onCancel }) => {
   };
 
   return (
-    <div>
+    <div className={styles.mb}>
       <form className={`${styles.form} ${styles.container}`} onSubmit={handleSubmit}>
         <div className={styles.cancelIcon} onClick={onCancel}>
           <CancelIcon />

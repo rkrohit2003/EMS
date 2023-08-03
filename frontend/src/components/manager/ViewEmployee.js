@@ -9,7 +9,7 @@ const ViewEmployee = ({ employee, onCancel }) => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div>
+    <div className={styles.mb}>
       <form className={`${styles.form} ${styles.container}`}>
         <div className={styles.cancelIcon} onClick={onCancel}>
           <CancelIcon />
