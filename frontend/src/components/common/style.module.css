@@ -116,11 +116,13 @@
   /* padding: auto; */
   box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
   z-index: 2;
+  width: 100%;
 }
 
 .listHorizontal {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .listItem {

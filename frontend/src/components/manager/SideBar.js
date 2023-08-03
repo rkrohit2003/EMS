@@ -30,33 +30,33 @@ const Sidebar = () => {
   return isMobile ? (
     <div className={styles.mobileSidebar}>
       <List className={styles.listHorizontal}>
-        <ListItem button onClick={() => navigate('/listEmployee')} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-          <ListItemIcon style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <ListItem button onClick={() => navigate('/listEmployee')} style={{ fontSize: '1.5rem', padding: '4px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <ListItemIcon style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <PeopleAltIcon />
           </ListItemIcon>
         </ListItem>
-        <ListItem button onClick={() => navigate('/addEmployee')} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-          <ListItemIcon style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <ListItem button onClick={() => navigate('/addEmployee')} style={{ fontSize: '1.5rem', padding: '4px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <ListItemIcon style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <AddCircleIcon />
           </ListItemIcon>
         </ListItem>
-        <ListItem button onClick={() => navigate('/assignTask')} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-          <ListItemIcon style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <ListItem button onClick={() => navigate('/assignTask')} style={{ fontSize: '1.5rem', padding: '4px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <ListItemIcon style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <AddTaskIcon />
           </ListItemIcon>
         </ListItem>
-        <ListItem button onClick={() => navigate('/listTask')} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-          <ListItemIcon style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <ListItem button onClick={() => navigate('/listTask')} style={{ fontSize: '1.5rem', padding: '4px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <ListItemIcon style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <TaskIcon />
           </ListItemIcon>
         </ListItem>
-        <ListItem button onClick={() => navigate('/addNotification')} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-          <ListItemIcon style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <ListItem button onClick={() => navigate('/addNotification')} style={{ fontSize: '1.5rem', padding: '4px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <ListItemIcon style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <AddAlertIcon />
           </ListItemIcon>
         </ListItem>
-        <ListItem button onClick={() => navigate('/leaveRequest')} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-          <ListItemIcon style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <ListItem button onClick={() => navigate('/leaveRequest')} style={{ fontSize: '1.5rem', padding: '4px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <ListItemIcon style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <HolidayVillageIcon />
           </ListItemIcon>
         </ListItem>
